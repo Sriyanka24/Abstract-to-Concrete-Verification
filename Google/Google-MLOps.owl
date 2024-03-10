@@ -1,0 +1,823 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.com/ontologies/mlops#"
+     xml:base="http://www.example.com/ontologies/mlops"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mlops="http://www.example.com/ontologies/mlops#"
+     xmlns:aws-mlops="http://www.example.com/ontologies/aws-mlops#"
+     xmlns:Triggers_CI="http://www.example.com/ontologies/mlops#Triggers_CI/"
+     xmlns:Triggers_CI1="http://www.example.com/ontologies/aws-mlops#Triggers_CI/"
+     xmlns:Triggers_CI2="http://www.example.com/ontologies/google-mlops#Triggers_CI/"
+     xmlns:google-mlops="http://www.example.com/ontologies/google-mlops#"
+     xmlns:_Training_logs="http://www.example.com/ontologies/aws-mlops#Monitors_new_data/_Training_logs/"
+     xmlns:Monitors_new_data="http://www.example.com/ontologies/mlops#Monitors_new_data,"
+     xmlns:Stores_Docker_image="http://www.example.com/ontologies/google-mlops#Stores_Docker_image/"
+     xmlns:_on_degraded_performace="http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
+     xmlns:_on_degraded_performace3="http://www.example.com/ontologies/google-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
+     xmlns:_on_degraded_performace_="http://www.example.com/ontologies/mlops#Triggers_retraining_if_new_data_is_available_/_on_degraded_performace_/">
+    <owl:Ontology rdf:about="http://www.example.com/ontologies/google-mlops">
+        <rdfs:comment>This ontology models the architecture of MLOps (Machine Learning Operations) for cloud platforms, specifically focusing on Azure, AWS, and Google Cloud.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Alerts -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Alerts"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Data_Transformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Data_Transformation"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Data_Validation -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Data_Validation">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Deploy_and_run -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Deploy_and_run">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Deploys_as_a_Serving_app -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Deploys_as_a_Serving_app"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Evaluation_Metrics -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Evaluation_Metrics">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Event-driven -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Event-driven">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Experiments -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Experiments"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Feature_Engineering -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Feature_Engineering"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Google -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Google"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Monitoring -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Monitoring"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Monitors_new_data -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Monitors_new_data"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Publishes_messages_on_a_schedule -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Publishes_messages_on_a_schedule">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Pull_container_images -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Pull_container_images">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Push_Docker_images -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Push_Docker_images">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Source_code_integration -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Source_code_integration"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Stores_to_the_Registry_if_passed_the_evaluation -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Stores_to_the_Registry_if_passed_the_evaluation"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Test_data -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Test_data"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Training_data -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Training_data"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Trigger_Cloud_Build -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Trigger_Cloud_Build">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers_if_the_Model_is_updated_in_the_Registry -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers_if_the_Model_is_updated_in_the_Registry"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers_if_the_image_is_updated_in_the_Registry -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers_if_the_image_is_updated_in_the_Registry"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#belongsTo"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#partOf"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Stores_Docker_image/_Artifacts -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Stores_Docker_image/_Artifacts"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers_CI/CD_if_there_is_a_change_in_the_code -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers_CI/CD_if_there_is_a_change_in_the_code"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Artifact_Registry -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Artifact_Registry">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Composer -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Composer">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Functions_SDK -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Functions_SDK">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Scheduler -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Scheduler">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Storage -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Storage"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Data_Processing -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Data_Processing"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Dataflow -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Dataflow">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Data_Processing"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Google -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Google"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Model_Deployment -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Model_Deployment">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Release/Deployment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Model_Registry -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Model_Registry">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Model_Serving -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Model_Serving">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Release/Deployment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Release_gateway -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Release_gateway">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Source_Code_Repo -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Source_Code_Repo">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Train_and_Evaluate -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Train_and_Evaluate">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#User -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#User"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Vertex_AI_Feature_Store -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Vertex_AI_Feature_Store">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Data_Processing"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Workspace -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Workspace"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#CI/CD_steps -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#CI/CD_steps">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Managing/Monitoring_Model -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Managing/Monitoring_Model">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Release/Deployment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Model_Release/Deployment -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Model_Release/Deployment"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Pub/Sub -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Pub/Sub">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers/Scheduler -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Abstract -->
+
+    <owl:Thing rdf:about="http://www.example.com/ontologies/google-mlops#Abstract">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Artifact_Registry -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Artifact_Registry">
+        <google-mlops:Triggers_if_the_image_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/google-mlops#Train_and_Evaluate"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#CloudBuild -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#CloudBuild">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_steps"/>
+        <google-mlops:Push_Docker_images rdf:resource="http://www.example.com/ontologies/google-mlops#GCP_Artifact_Registry"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Vertex_AI_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Composer -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Composer">
+        <google-mlops:Event-driven rdf:resource="http://www.example.com/ontologies/google-mlops#Pub/Sub"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Functions_SDK -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Functions_SDK">
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google"/>
+        <_on_degraded_performace3:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Train_and_Evaluate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Scheduler -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Scheduler">
+        <google-mlops:Publishes_messages_on_a_schedule rdf:resource="http://www.example.com/ontologies/google-mlops#Pub/Sub"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Source_Repositories -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Source_Repositories">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Source_Code_Repo"/>
+        <google-mlops:Trigger_Cloud_Build rdf:resource="http://www.example.com/ontologies/google-mlops#CloudBuild"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Vertex_AI_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Storage -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Storage">
+        <google-mlops:Data_Transformation rdf:resource="http://www.example.com/ontologies/google-mlops#Data_Processing"/>
+        <google-mlops:Monitors_new_data rdf:resource="http://www.example.com/ontologies/google-mlops#Managing/Monitoring_Model"/>
+        <google-mlops:Training_data rdf:resource="http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Data_Processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Data_Processing">
+        <google-mlops:Test_data rdf:resource="http://www.example.com/ontologies/google-mlops#Workspace"/>
+        <google-mlops:Training_data rdf:resource="http://www.example.com/ontologies/google-mlops#Cloud_Storage"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Dataflow -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Dataflow">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Data_Processing"/>
+        <google-mlops:Test_data rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Workbench"/>
+        <google-mlops:Training_data rdf:resource="http://www.example.com/ontologies/google-mlops#Google_Cloud_Storage"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Data_Processing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#GCP_Artifact_Registry -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#GCP_Artifact_Registry">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Artifact_Registry"/>
+        <google-mlops:Deploy_and_run rdf:resource="http://www.example.com/ontologies/google-mlops#Release_gateway"/>
+        <google-mlops:Pull_container_images rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Training/Retraining_Pipeline"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Vertex_AI_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#GCP_User -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#GCP_User">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#User"/>
+        <google-mlops:Experiments rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Workbench"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Google -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Google">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Google_Cloud_Storage -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Google_Cloud_Storage">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Cloud_Storage"/>
+        <google-mlops:Data_Transformation rdf:resource="http://www.example.com/ontologies/google-mlops#Dataflow"/>
+        <google-mlops:Monitors_new_data rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Model_Monitor"/>
+        <google-mlops:Training_data rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Training/Retraining_Pipeline"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Model_Deployment -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Model_Deployment">
+        <google-mlops:Deploys_as_a_Serving_app rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Serving"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Release/Deployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Model_Deployment_and_Monitoring -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Model_Deployment_and_Monitoring">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Release/Deployment"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Model_Registry -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Model_Registry">
+        <google-mlops:Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Deployment"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Model_Serving -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Model_Serving">
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Release/Deployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Release_gateway -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Release_gateway">
+        <google-mlops:Triggers_if_the_image_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Train_and_Evaluate"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Source_Code_Repo -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Source_Code_Repo">
+        <google-mlops:Source_code_integration rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_steps"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Train_and_Evaluate -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Train_and_Evaluate">
+        <google-mlops:Stores_to_the_Registry_if_passed_the_evaluation rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Registry"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#User -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#User">
+        <google-mlops:Experiments rdf:resource="http://www.example.com/ontologies/google-mlops#Workspace"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Vertex_AI_Feature_Store -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Vertex_AI_Feature_Store">
+        <google-mlops:Data_Validation rdf:resource="http://www.example.com/ontologies/google-mlops#Dataflow"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Data_Processing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Vertex_AI_Model_Monitor -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Vertex_AI_Model_Monitor">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Managing/Monitoring_Model"/>
+        <google-mlops:Alerts rdf:resource="http://www.example.com/ontologies/google-mlops#Pub/Sub"/>
+        <google-mlops:Monitoring rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Prediction"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Deployment_and_Monitoring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Vertex_AI_Model_Registry -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Vertex_AI_Model_Registry">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Registry"/>
+        <google-mlops:Deploys_as_a_Serving_app rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Prediction"/>
+        <google-mlops:Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Prediction"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Training/Retraining_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Vertex_AI_Prediction -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Vertex_AI_Prediction">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Deployment"/>
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Serving"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Deployment_and_Monitoring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Vertex_AI_Train_and_Evaluate -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Vertex_AI_Train_and_Evaluate">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Train_and_Evaluate"/>
+        <google-mlops:Stores_to_the_Registry_if_passed_the_evaluation rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Model_Registry"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Training/Retraining_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Vertex_AI_Workbench -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Vertex_AI_Workbench">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Workspace"/>
+        <google-mlops:Feature_Engineering rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Feature_Store"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <Triggers_CI2:CD_if_there_is_a_change_in_the_code rdf:resource="http://www.example.com/ontologies/google-mlops#Cloud_Source_Repositories"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Workspace -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Workspace">
+        <google-mlops:Feature_Engineering rdf:resource="http://www.example.com/ontologies/google-mlops#Data_Processing"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <Triggers_CI2:CD_if_there_is_a_change_in_the_code rdf:resource="http://www.example.com/ontologies/google-mlops#Source_Code_Repo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline">
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#CI/CD_Vertex_AI_Pipeline -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#CI/CD_Vertex_AI_Pipeline">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#CI/CD_steps -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#CI/CD_steps">
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Pipeline"/>
+        <Stores_Docker_image:_Artifacts rdf:resource="http://www.example.com/ontologies/google-mlops#Artifact_Registry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Managing/Monitoring_Model -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Managing/Monitoring_Model">
+        <google-mlops:Alerts rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler"/>
+        <google-mlops:Monitoring rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Serving"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Release/Deployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Model_Release/Deployment -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Model_Release/Deployment">
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Pub/Sub -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Pub/Sub">
+        <google-mlops:Triggers rdf:resource="http://www.example.com/ontologies/google-mlops#Cloud_Functions_SDK"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+        <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline">
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers/Scheduler -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler">
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
+        <_on_degraded_performace3:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/google-mlops#Train_and_Evaluate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Vertex_AI_Training/Retraining_Pipeline -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Vertex_AI_Training/Retraining_Pipeline">
+        <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline"/>
+        <google-mlops:Evaluation_Metrics rdf:resource="http://www.example.com/ontologies/google-mlops#Google_Cloud_Storage"/>
+        <google-mlops:Training_data rdf:resource="http://www.example.com/ontologies/google-mlops#Google_Cloud_Storage"/>
+        <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

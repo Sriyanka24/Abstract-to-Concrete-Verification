@@ -1,0 +1,443 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.com/ontologies/mlops#"
+     xml:base="http://www.example.com/ontologies/mlops"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mlops="http://www.example.com/ontologies/mlops#"
+     xmlns:aws-mlops="http://www.example.com/ontologies/aws-mlops#"
+     xmlns:Triggers_CI="http://www.example.com/ontologies/mlops#Triggers_CI/"
+     xmlns:Triggers_CI1="http://www.example.com/ontologies/aws-mlops#Triggers_CI/"
+     xmlns:Triggers_CI2="http://www.example.com/ontologies/abstract-mlops#Triggers_CI/"
+     xmlns:abstract-mlops="http://www.example.com/ontologies/abstract-mlops#"
+     xmlns:Monitors_new_data="http://www.example.com/ontologies/mlops#Monitors_new_data,"
+     xmlns:Stores_Docker_image="http://www.example.com/ontologies/aws-mlops#Stores_Docker_image/"
+     xmlns:Stores_Docker_image3="http://www.example.com/ontologies/abstract-mlops#Stores_Docker_image/"
+     xmlns:_on_degraded_performace="http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
+     xmlns:_on_degraded_performace1="http://www.example.com/ontologies/abstract-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
+     xmlns:_on_degraded_performace_="http://www.example.com/ontologies/mlops#Triggers_retraining_if_new_data_is_available_/_on_degraded_performace_/">
+    <owl:Ontology rdf:about="http://www.example.com/ontologies/abstract-mlops">
+        <rdfs:comment>This ontology models the architecture of MLOps (Machine Learning Operations) for cloud platforms, specifically focusing on Azure, AWS, and Google Cloud.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Alerts -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Alerts"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Data_Transformation -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Data_Transformation"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Deploys_as_a_Serving_app -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Deploys_as_a_Serving_app"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Experiments -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Experiments"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Feature_Engineering -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Feature_Engineering"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Monitoring -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Monitoring"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Monitors_new_data -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Monitors_new_data"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Source_code_integration -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Source_code_integration"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Stores_to_the_Registry_if_passed_the_evaluation -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Stores_to_the_Registry_if_passed_the_evaluation"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Test_data -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Test_data"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Training_data -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Training_data"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_Model_is_updated_in_the_Registry -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_Model_is_updated_in_the_Registry"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_image_is_updated_in_the_Registry -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_image_is_updated_in_the_Registry"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#belongsTo"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#partOf"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Stores_Docker_image/_Artifacts -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Stores_Docker_image/_Artifacts"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers_CI/CD_if_there_is_a_change_in_the_code -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers_CI/CD_if_there_is_a_change_in_the_code"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Artifact_Registry -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Artifact_Registry">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Cloud_Storage -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Cloud_Storage"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Data_Processing -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Data_Processing"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Model_Deployment -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Deployment">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Model_Registry -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Registry">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Model_Serving -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Serving">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Source_Code_Repo -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Source_Code_Repo">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#User -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#User"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Workspace -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Workspace"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#CI/CD_steps -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#CI/CD_steps">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Managing/Monitoring_Model -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Managing/Monitoring_Model">
+        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers/Scheduler -->
+
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers/Scheduler"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Abstract -->
+
+    <owl:Thing rdf:about="http://www.example.com/ontologies/abstract-mlops#Abstract">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Artifact_Registry -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Artifact_Registry">
+        <abstract-mlops:Triggers_if_the_image_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <abstract-mlops:partOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Cloud_Storage -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Cloud_Storage">
+        <abstract-mlops:Data_Transformation rdf:resource="http://www.example.com/ontologies/abstract-mlops#Data_Processing"/>
+        <abstract-mlops:Monitors_new_data rdf:resource="http://www.example.com/ontologies/abstract-mlops#Managing/Monitoring_Model"/>
+        <abstract-mlops:Training_data rdf:resource="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Data_Processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Data_Processing">
+        <abstract-mlops:Test_data rdf:resource="http://www.example.com/ontologies/abstract-mlops#Workspace"/>
+        <abstract-mlops:Training_data rdf:resource="http://www.example.com/ontologies/abstract-mlops#Cloud_Storage"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Model_Deployment -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Deployment">
+        <abstract-mlops:Deploys_as_a_Serving_app rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Serving"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <abstract-mlops:partOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Model_Registry -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Registry">
+        <abstract-mlops:Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Deployment"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <abstract-mlops:partOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Model_Serving -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Serving">
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <abstract-mlops:partOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Source_Code_Repo -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Source_Code_Repo">
+        <abstract-mlops:Source_code_integration rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_steps"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <abstract-mlops:partOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate">
+        <abstract-mlops:Stores_to_the_Registry_if_passed_the_evaluation rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Registry"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <abstract-mlops:partOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#User -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#User">
+        <abstract-mlops:Experiments rdf:resource="http://www.example.com/ontologies/abstract-mlops#Workspace"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Workspace -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Workspace">
+        <abstract-mlops:Feature_Engineering rdf:resource="http://www.example.com/ontologies/abstract-mlops#Data_Processing"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <Triggers_CI2:CD_if_there_is_a_change_in_the_code rdf:resource="http://www.example.com/ontologies/abstract-mlops#Source_Code_Repo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline">
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#CI/CD_steps -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#CI/CD_steps">
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <abstract-mlops:partOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
+        <Stores_Docker_image3:_Artifacts rdf:resource="http://www.example.com/ontologies/abstract-mlops#Artifact_Registry"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Managing/Monitoring_Model -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Managing/Monitoring_Model">
+        <abstract-mlops:Alerts rdf:resource="http://www.example.com/ontologies/abstract-mlops#Triggers/Scheduler"/>
+        <abstract-mlops:Monitoring rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Serving"/>
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <abstract-mlops:partOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment">
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline">
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers/Scheduler -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers/Scheduler">
+        <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
+        <_on_degraded_performace1:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

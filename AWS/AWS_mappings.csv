@@ -1,0 +1,17 @@
+Abstract Node,AWS Node
+Model_Release/Deployment,Model_Deployment_CodePipeline
+Managing/Monitoring_Model,Model_Monitoring_Job
+Model_Registry,SageMaker_Model_Registry
+Model_Serving,SageMaker_Endpoint
+User,AWS_User
+Training/Retraining_Pipeline,Model_Training/Retraining_CodePipeline
+Triggers/Scheduler,Triggers/Scheduler_AWS
+Artifact_Registry,ECR
+Data_Processing,Feature_Engineering_and_Data_Labeling
+Cloud_Storage,S3_Bucket
+CI/CD_Pipeline,SageMaker_Container_Images_CI/CD_CodePipeline
+Model_Deployment,CloudFormation
+CI/CD_steps,AWS_CodeBuild_and_SageMaker_Docker_Image
+Workspace,SageMaker_Notebook
+Train_and_Evaluate,SageMaker_ML_Pipeline
+Source_Code_Repo,AWS_CodeCommit

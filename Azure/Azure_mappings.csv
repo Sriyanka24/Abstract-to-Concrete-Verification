@@ -1,0 +1,16 @@
+Abstract Node,Azure Node
+Model_Release/Deployment,Azure_DevOps_Release_Pipeline
+Managing/Monitoring_Model,Application_Insights
+Model_Registry,AML_Model_Registry
+Model_Serving,AML_Model_Serving/_Scoring_services
+User,Azure_User
+Training/Retraining_Pipeline,AML_Retraining_Pipeline
+Artifact_Registry,Azure_Container_Registry
+Data_Processing,Data_Prep_and_Validation
+Cloud_Storage,Azure_Blob_Storage
+CI/CD_Pipeline,Azure_DevOps_Build_Pipeline
+Model_Deployment,AML_Model_Management
+CI/CD_steps,Continuous_Integration
+Workspace,AML_Workspace
+Train_and_Evaluate,AML_Compute_Train_and_Evaluate
+Source_Code_Repo,Azure_Repos
