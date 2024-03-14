@@ -13,7 +13,8 @@
      xmlns:Monitors_new_data="http://www.example.com/ontologies/mlops#Monitors_new_data,"
      xmlns:Stores_Docker_image="http://www.example.com/ontologies/aws-mlops#Stores_Docker_image/"
      xmlns:_on_degraded_performace="http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
-     xmlns:_on_degraded_performace_="http://www.example.com/ontologies/mlops#Triggers_retraining_if_new_data_is_available_/_on_degraded_performace_/">
+     xmlns:_on_degraded_performace_="http://www.example.com/ontologies/mlops#Triggers_retraining_if_new_data_is_available_/_on_degraded_performace_/"
+     xmlns:_on_degraded_performance="http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/">
     <owl:Ontology rdf:about="http://www.example.com/ontologies/aws-mlops">
         <rdfs:comment>This ontology models the architecture of MLOps (Machine Learning Operations) for cloud platforms, specifically focusing on Azure, AWS, and Google Cloud.</rdfs:comment>
     </owl:Ontology>
@@ -143,15 +144,15 @@
     
 
 
-    <!-- http://www.example.com/ontologies/aws-mlops#Triggers_if_the_Model_is_updated_in_the_Registry -->
-
-    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/aws-mlops#Triggers_if_the_Model_is_updated_in_the_Registry"/>
-    
-
-
     <!-- http://www.example.com/ontologies/aws-mlops#Triggers_if_the_image_is_updated_in_the_Registry -->
 
     <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/aws-mlops#Triggers_if_the_image_is_updated_in_the_Registry"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/aws-mlops#Triggers_if_the_model_is_updated_in_the_Registry -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/aws-mlops#Triggers_if_the_model_is_updated_in_the_Registry"/>
     
 
 
@@ -179,9 +180,9 @@
     
 
 
-    <!-- http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler -->
+    <!-- http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/_based_on_Scheduler -->
 
-    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/_based_on_Scheduler"/>
     
 
 
@@ -520,7 +521,7 @@
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/aws-mlops#CloudWatch_Metrics_and_Alarm">
         <aws-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS"/>
         <aws-mlops:partOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Triggers/Scheduler_AWS"/>
-        <_on_degraded_performace:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_for_EDA"/>
+        <_on_degraded_performance:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_for_EDA"/>
     </owl:NamedIndividual>
     
 
@@ -611,7 +612,7 @@
     <!-- http://www.example.com/ontologies/aws-mlops#Model_Registry -->
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Registry">
-        <aws-mlops:Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Deployment"/>
+        <aws-mlops:Triggers_if_the_model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Deployment"/>
         <aws-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/aws-mlops#Abstract"/>
         <aws-mlops:partOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Training/Retraining_Pipeline"/>
     </owl:NamedIndividual>
@@ -667,7 +668,7 @@
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/aws-mlops#SageMaker_Model_Registry">
         <rdf:type rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Registry"/>
         <aws-mlops:Model_Status_Change_Event_Rule rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_and_AWS_CodeBuild"/>
-        <aws-mlops:Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_and_AWS_CodeBuild"/>
+        <aws-mlops:Triggers_if_the_model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_and_AWS_CodeBuild"/>
         <aws-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS"/>
         <aws-mlops:partOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Custom_VPC"/>
         <aws-mlops:partOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Training/Retraining_CodePipeline"/>
@@ -792,7 +793,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/aws-mlops#Triggers/Scheduler">
         <aws-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/aws-mlops#Abstract"/>
-        <_on_degraded_performace:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/aws-mlops#Train_and_Evaluate"/>
+        <_on_degraded_performance:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/aws-mlops#Train_and_Evaluate"/>
     </owl:NamedIndividual>
     
 

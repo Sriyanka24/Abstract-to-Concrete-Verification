@@ -9,7 +9,8 @@
      xmlns:Triggers_CI="http://www.example.com/ontologies/azure-mlops#Triggers_CI/"
      xmlns:azure-mlops="http://www.example.com/ontologies/azure-mlops#"
      xmlns:Stores_Docker_image="http://www.example.com/ontologies/azure-mlops#Stores_Docker_image/"
-     xmlns:_on_degraded_performace="http://www.example.com/ontologies/azure-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/">
+     xmlns:_on_degraded_performace="http://www.example.com/ontologies/azure-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
+     xmlns:_on_degraded_performance="http://www.example.com/ontologies/azure-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/">
     <owl:Ontology rdf:about="http://www.example.com/ontologies/azure-mlops">
         <rdfs:comment>This ontology models the architecture of MLOps (Machine Learning Operations) for cloud platforms, specifically focusing on Azure, AWS, and Google Cloud.</rdfs:comment>
     </owl:Ontology>
@@ -63,9 +64,9 @@
     
 
 
-    <!-- http://www.example.com/ontologies/azure-mlops#Model_Performance_Data -->
+    <!-- http://www.example.com/ontologies/azure-mlops#Model_performance_data -->
 
-    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/azure-mlops#Model_Performance_Data">
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/azure-mlops#Model_performance_data">
         <rdfs:subPropertyOf rdf:resource="http://www.example.com/ontologies/azure-mlops#Azure"/>
     </owl:ObjectProperty>
     
@@ -139,15 +140,15 @@
     
 
 
-    <!-- http://www.example.com/ontologies/azure-mlops#Triggers_if_the_Model_is_updated_in_the_Registry -->
-
-    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/azure-mlops#Triggers_if_the_Model_is_updated_in_the_Registry"/>
-    
-
-
     <!-- http://www.example.com/ontologies/azure-mlops#Triggers_if_the_image_is_updated_in_the_Registry -->
 
     <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/azure-mlops#Triggers_if_the_image_is_updated_in_the_Registry"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/azure-mlops#Triggers_if_the_model_is_updated_in_the_Registry -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/azure-mlops#Triggers_if_the_model_is_updated_in_the_Registry"/>
     
 
 
@@ -175,9 +176,9 @@
     
 
 
-    <!-- http://www.example.com/ontologies/azure-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler -->
+    <!-- http://www.example.com/ontologies/azure-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/_based_on_Scheduler -->
 
-    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/azure-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/azure-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/_based_on_Scheduler"/>
     
 
 
@@ -379,7 +380,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/azure-mlops#AML_Model_Registry">
         <rdf:type rdf:resource="http://www.example.com/ontologies/azure-mlops#Model_Registry"/>
-        <Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/azure-mlops#AML_Model_Management"/>
+        <Triggers_if_the_model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/azure-mlops#AML_Model_Management"/>
         <belongsTo rdf:resource="http://www.example.com/ontologies/azure-mlops#Azure"/>
         <partOf rdf:resource="http://www.example.com/ontologies/azure-mlops#AML_Retraining_Pipeline"/>
     </owl:NamedIndividual>
@@ -490,7 +491,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/azure-mlops#Azure_Machine_Learning_pipeline_endpoint">
         <belongsTo rdf:resource="http://www.example.com/ontologies/azure-mlops#Azure"/>
-        <_on_degraded_performace:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/azure-mlops#AML_Compute_Train_and_Evaluate"/>
+        <_on_degraded_performance:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/azure-mlops#AML_Compute_Train_and_Evaluate"/>
     </owl:NamedIndividual>
     
 
@@ -583,7 +584,7 @@
     <!-- http://www.example.com/ontologies/azure-mlops#Model_Registry -->
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/azure-mlops#Model_Registry">
-        <Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/azure-mlops#Model_Deployment"/>
+        <Triggers_if_the_model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/azure-mlops#Model_Deployment"/>
         <belongsTo rdf:resource="http://www.example.com/ontologies/azure-mlops#Abstract"/>
         <partOf rdf:resource="http://www.example.com/ontologies/azure-mlops#Training/Retraining_Pipeline"/>
     </owl:NamedIndividual>
@@ -697,7 +698,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/azure-mlops#Triggers/Scheduler">
         <belongsTo rdf:resource="http://www.example.com/ontologies/azure-mlops#Abstract"/>
-        <_on_degraded_performace:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/azure-mlops#Train_and_Evaluate"/>
+        <_on_degraded_performance:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/azure-mlops#Train_and_Evaluate"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

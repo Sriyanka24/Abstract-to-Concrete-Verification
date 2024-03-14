@@ -17,7 +17,8 @@
      xmlns:Stores_Docker_image3="http://www.example.com/ontologies/abstract-mlops#Stores_Docker_image/"
      xmlns:_on_degraded_performace="http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
      xmlns:_on_degraded_performace1="http://www.example.com/ontologies/abstract-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
-     xmlns:_on_degraded_performace_="http://www.example.com/ontologies/mlops#Triggers_retraining_if_new_data_is_available_/_on_degraded_performace_/">
+     xmlns:_on_degraded_performace_="http://www.example.com/ontologies/mlops#Triggers_retraining_if_new_data_is_available_/_on_degraded_performace_/"
+     xmlns:_on_degraded_performance="http://www.example.com/ontologies/abstract-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/">
     <owl:Ontology rdf:about="http://www.example.com/ontologies/abstract-mlops">
         <rdfs:comment>This ontology models the architecture of MLOps (Machine Learning Operations) for cloud platforms, specifically focusing on Azure, AWS, and Google Cloud.</rdfs:comment>
     </owl:Ontology>
@@ -101,15 +102,15 @@
     
 
 
-    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_Model_is_updated_in_the_Registry -->
-
-    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_Model_is_updated_in_the_Registry"/>
-    
-
-
     <!-- http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_image_is_updated_in_the_Registry -->
 
     <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_image_is_updated_in_the_Registry"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_model_is_updated_in_the_Registry -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers_if_the_model_is_updated_in_the_Registry"/>
     
 
 
@@ -137,9 +138,9 @@
     
 
 
-    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler -->
+    <!-- http://www.example.com/ontologies/abstract-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/_based_on_Scheduler -->
 
-    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/_based_on_Scheduler"/>
     
 
 
@@ -329,7 +330,7 @@
     <!-- http://www.example.com/ontologies/abstract-mlops#Model_Registry -->
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Registry">
-        <abstract-mlops:Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Deployment"/>
+        <abstract-mlops:Triggers_if_the_model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Deployment"/>
         <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
         <abstract-mlops:partOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline"/>
     </owl:NamedIndividual>
@@ -433,7 +434,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/abstract-mlops#Triggers/Scheduler">
         <abstract-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/abstract-mlops#Abstract"/>
-        <_on_degraded_performace1:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate"/>
+        <_on_degraded_performance:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

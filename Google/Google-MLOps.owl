@@ -17,7 +17,8 @@
      xmlns:Stores_Docker_image="http://www.example.com/ontologies/google-mlops#Stores_Docker_image/"
      xmlns:_on_degraded_performace="http://www.example.com/ontologies/aws-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
      xmlns:_on_degraded_performace3="http://www.example.com/ontologies/google-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/"
-     xmlns:_on_degraded_performace_="http://www.example.com/ontologies/mlops#Triggers_retraining_if_new_data_is_available_/_on_degraded_performace_/">
+     xmlns:_on_degraded_performace_="http://www.example.com/ontologies/mlops#Triggers_retraining_if_new_data_is_available_/_on_degraded_performace_/"
+     xmlns:_on_degraded_performance="http://www.example.com/ontologies/google-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/">
     <owl:Ontology rdf:about="http://www.example.com/ontologies/google-mlops">
         <rdfs:comment>This ontology models the architecture of MLOps (Machine Learning Operations) for cloud platforms, specifically focusing on Azure, AWS, and Google Cloud.</rdfs:comment>
     </owl:Ontology>
@@ -179,15 +180,15 @@
     
 
 
-    <!-- http://www.example.com/ontologies/google-mlops#Triggers_if_the_Model_is_updated_in_the_Registry -->
-
-    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers_if_the_Model_is_updated_in_the_Registry"/>
-    
-
-
     <!-- http://www.example.com/ontologies/google-mlops#Triggers_if_the_image_is_updated_in_the_Registry -->
 
     <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers_if_the_image_is_updated_in_the_Registry"/>
+    
+
+
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers_if_the_model_is_updated_in_the_Registry -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers_if_the_model_is_updated_in_the_Registry"/>
     
 
 
@@ -215,9 +216,9 @@
     
 
 
-    <!-- http://www.example.com/ontologies/google-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler -->
+    <!-- http://www.example.com/ontologies/google-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/_based_on_Scheduler -->
 
-    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performace/_based_on_Scheduler"/>
+    <owl:ObjectProperty rdf:about="http://www.example.com/ontologies/google-mlops#Triggers_retraining_if_new_data_is_available/_on_degraded_performance/_based_on_Scheduler"/>
     
 
 
@@ -445,9 +446,9 @@
     
 
 
-    <!-- http://www.example.com/ontologies/google-mlops#CloudBuild -->
+    <!-- http://www.example.com/ontologies/google-mlops#Cloud_Build -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#CloudBuild">
+    <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Build">
         <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_steps"/>
         <google-mlops:Push_Docker_images rdf:resource="http://www.example.com/ontologies/google-mlops#GCP_Artifact_Registry"/>
         <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
@@ -471,7 +472,7 @@
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Functions_SDK">
         <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
         <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler_Google"/>
-        <_on_degraded_performace3:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Train_and_Evaluate"/>
+        <_on_degraded_performance:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Train_and_Evaluate"/>
     </owl:NamedIndividual>
     
 
@@ -490,7 +491,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Cloud_Source_Repositories">
         <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Source_Code_Repo"/>
-        <google-mlops:Trigger_Cloud_Build rdf:resource="http://www.example.com/ontologies/google-mlops#CloudBuild"/>
+        <google-mlops:Trigger_Cloud_Build rdf:resource="http://www.example.com/ontologies/google-mlops#Cloud_Build"/>
         <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
         <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#CI/CD_Vertex_AI_Pipeline"/>
     </owl:NamedIndividual>
@@ -594,7 +595,7 @@
     <!-- http://www.example.com/ontologies/google-mlops#Model_Registry -->
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Model_Registry">
-        <google-mlops:Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Deployment"/>
+        <google-mlops:Triggers_if_the_model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Deployment"/>
         <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
         <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Training/Retraining_Pipeline"/>
     </owl:NamedIndividual>
@@ -675,7 +676,7 @@
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Vertex_AI_Model_Registry">
         <rdf:type rdf:resource="http://www.example.com/ontologies/google-mlops#Model_Registry"/>
         <google-mlops:Deploys_as_a_Serving_app rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Prediction"/>
-        <google-mlops:Triggers_if_the_Model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Prediction"/>
+        <google-mlops:Triggers_if_the_model_is_updated_in_the_Registry rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Prediction"/>
         <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Google"/>
         <google-mlops:partOf rdf:resource="http://www.example.com/ontologies/google-mlops#Vertex_AI_Training/Retraining_Pipeline"/>
     </owl:NamedIndividual>
@@ -793,7 +794,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.example.com/ontologies/google-mlops#Triggers/Scheduler">
         <google-mlops:belongsTo rdf:resource="http://www.example.com/ontologies/google-mlops#Abstract"/>
-        <_on_degraded_performace3:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/google-mlops#Train_and_Evaluate"/>
+        <_on_degraded_performance:_based_on_Scheduler rdf:resource="http://www.example.com/ontologies/google-mlops#Train_and_Evaluate"/>
     </owl:NamedIndividual>
     
 

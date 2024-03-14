@@ -78,7 +78,6 @@ def mapped_platform_nodes(file_path, platform):
 
   abstract_nodes = get_abstract_nodes()
   platform_nodes = get_platform_nodes(file_path, platform)
-
   platform_dataframes = {}
 
   for abstract_node in abstract_nodes:

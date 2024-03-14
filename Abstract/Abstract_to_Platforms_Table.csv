@@ -5,7 +5,7 @@ User,AWS User,Azure User,GCP User
 Workspace,SageMaker Notebook,AML Workspace,Vertex AI Workbench
 CI/CD Pipeline,SageMaker Container Images CI/CD CodePipeline,Azure DevOps Build Pipeline,CI/CD Vertex AI Pipeline
 Source Code Repo,AWS CodeCommit,Azure Repos,Cloud Source Repositories
-CI/CD steps,AWS CodeBuild and SageMaker Docker Image,Continuous Integration,CloudBuild
+CI/CD steps,AWS CodeBuild and SageMaker Docker Image,Continuous Integration,Cloud Build
 Artifact Registry,ECR,Azure Container Registry,GCP Artifact Registry
 Training/Retraining Pipeline,Model Training/Retraining CodePipeline,AML Retraining Pipeline,Vertex AI Training/Retraining Pipeline
 Train and Evaluate,SageMaker ML Pipeline,AML Compute Train and Evaluate,Vertex AI Train and Evaluate
