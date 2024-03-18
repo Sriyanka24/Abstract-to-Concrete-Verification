@@ -1,0 +1,101 @@
+python verification.py
+
+
+Verifying Nodes
+
+
+AWS
+AWS is a full instantiation of the abstract model.
+All abstract model nodes are included in the AWS model.
+
+
+Azure
+Azure is not a full instantiation of the abstract model.
+The following abstract model nodes are not included in the Azure model:
+- Triggers/Scheduler
+
+
+Google
+Google is a full instantiation of the abstract model.
+All abstract model nodes are included in the Google model.
+
+
+AWS
+The following nodes are specific to the AWS model and do not appear in the Abstract model
+- CloudWatch_Metrics_and_Alarm
+- AWS_CodeCommit_for_EDA
+- AWS_CodeBuild_and_AWS_Lambda
+- Custom_VPC
+- Amazon_EventBridge
+- AWS_CodeCommit_and_AWS_CodeBuild
+
+
+Azure
+The following nodes are specific to the Azure model and do not appear in the Abstract model
+- Data_Sanity_and_Unit_Tests
+- Azure_Machine_Learning_pipeline_endpoint
+
+
+Google
+The following nodes are specific to the Google model and do not appear in the Abstract model
+- Release_gateway
+- Cloud_Composer
+- Cloud_Scheduler
+- Pub/Sub
+- Vertex_AI_Feature_Store
+- Cloud_Functions_SDK
+
+
+All nodes verified! The Abstract to Platforms mapping is verified programatically
+
+
+Verifying Properties
+
+
+AWS
+All abstract properties are present in AWS properties.
+
+
+Azure
+All abstract properties are present in Azure properties.
+
+
+Google
+All abstract properties are present in Google properties.
+
+
+AWS
+
+Platform-specific properties AWS:
+Triggers_ML_Pipeline
+Model_Status_Change_Event_Rule
+Scheduled_Events
+Data_validation
+Executes_CFN_template
+AWS
+
+
+Azure
+
+Platform-specific properties Azure:
+Model_performance_data
+Publish_Machine_Learning_Pipeline
+Stores_Artifacts
+Azure
+Pushes_code_to_the_repo
+Triggers_Data-driven_Schedule-driven_Metrics-driven
+
+
+Google
+
+Platform-specific properties Google:
+Triggers
+Pull_container_images
+Evaluation_Metrics
+Data_Validation
+Deploy_and_run
+Google
+Trigger_Cloud_Build
+Publishes_messages_on_a_schedule
+Push_Docker_images
+Event-driven
