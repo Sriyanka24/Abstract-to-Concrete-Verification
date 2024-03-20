@@ -22,12 +22,12 @@ All abstract model nodes are included in the Google model.
 
 AWS
 The following nodes are specific to the AWS model and do not appear in the Abstract model
-- CloudWatch_Metrics_and_Alarm
-- AWS_CodeCommit_for_EDA
-- AWS_CodeBuild_and_AWS_Lambda
 - Custom_VPC
-- Amazon_EventBridge
+- AWS_CodeCommit_for_EDA
 - AWS_CodeCommit_and_AWS_CodeBuild
+- Amazon_EventBridge
+- CloudWatch_Metrics_and_Alarm
+- AWS_CodeBuild_and_AWS_Lambda
 
 
 Azure
@@ -38,12 +38,12 @@ The following nodes are specific to the Azure model and do not appear in the Abs
 
 Google
 The following nodes are specific to the Google model and do not appear in the Abstract model
-- Release_gateway
-- Cloud_Composer
 - Cloud_Scheduler
-- Pub/Sub
-- Vertex_AI_Feature_Store
 - Cloud_Functions_SDK
+- Pub/Sub
+- Cloud_Composer
+- Release_gateway
+- Vertex_AI_Feature_Store
 
 
 All nodes verified! The Abstract to Platforms mapping is verified programatically
@@ -67,35 +67,63 @@ All abstract properties are present in Google properties.
 AWS
 
 Platform-specific properties AWS:
-Triggers_ML_Pipeline
 Model_Status_Change_Event_Rule
+Triggers_ML_Pipeline
+AWS
 Scheduled_Events
 Data_validation
 Executes_CFN_template
-AWS
 
 
 Azure
 
 Platform-specific properties Azure:
-Model_performance_data
 Publish_Machine_Learning_Pipeline
-Stores_Artifacts
-Azure
-Pushes_code_to_the_repo
 Triggers_Data-driven_Schedule-driven_Metrics-driven
+Pushes_code_to_the_repo
+Azure
+Model_performance_data
+Stores_Artifacts
 
 
 Google
 
 Platform-specific properties Google:
-Triggers
-Pull_container_images
-Evaluation_Metrics
-Data_Validation
 Deploy_and_run
-Google
+Pull_container_images
+Data_Validation
 Trigger_Cloud_Build
+Evaluation_Metrics
 Publishes_messages_on_a_schedule
 Push_Docker_images
+Triggers
+Google
 Event-driven
+
+
+
+AWS:
+100.00% of abstract nodes are present.
+6 platform-specific nodes found.
+
+Azure:
+93.75% of abstract nodes are present.
+2 platform-specific nodes found.
+
+Google:
+100.00% of abstract nodes are present.
+5 platform-specific nodes found.
+
+
+
+AWS:
+100.00% of abstract properties are present.
+6 platform-specific properties found.
+
+Azure:
+100.00% of abstract properties are present.
+6 platform-specific properties found.
+
+Google:
+100.00% of abstract properties are present.
+10 platform-specific properties found.

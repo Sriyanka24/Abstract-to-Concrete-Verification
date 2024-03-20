@@ -261,3 +261,55 @@ def concrete_properties(abstract_properties, platform_properties, platform):
 concrete_properties(Abstract_properties, AWS_properties, "AWS")
 concrete_properties(Abstract_properties, Azure_properties, "Azure")
 concrete_properties(Abstract_properties, Google_properties, "Google")
+
+
+# Analyzes platform nodes and prints percentage and count information.
+def analyze_platform_nodes(platform):
+
+  df = pd.read_csv(f"{platform}/{platform}_mappings.csv")
+  abstract_nodes = get_abstract_nodes()
+  platform_nodes = get_platform_nodes(f"{platform}/AWS-MLOps.owl" if platform == "AWS" else f"{platform}/Azure-MLOps.owl" if platform == "Azure" else f"{platform}/Google-MLOps.owl", platform)
+
+  # Calculate percentage of abstract nodes present
+  total_abstract_nodes = len(abstract_nodes)
+  mapped_abstract_nodes = len(df)
+  percentage_mapped = (mapped_abstract_nodes / total_abstract_nodes) * 100
+
+  # Calculate platform-specific node count
+  platform_specific_nodes = len(platform_nodes) - mapped_abstract_nodes
+
+  print(f"\n{platform}:")
+  print(f"{percentage_mapped:.2f}% of abstract nodes are present.")
+  print(f"{platform_specific_nodes} platform-specific nodes found.")
+
+
+print("\n")
+analyze_platform_nodes("AWS")
+analyze_platform_nodes("Azure")
+analyze_platform_nodes("Google")
+
+def analyze_platform_properties(abstract_properties, platform_properties, platform):
+  """Analyzes platform properties and prints percentage and count information.
+
+  Args:
+      abstract_properties: Set of abstract properties.
+      platform_properties: Set of platform properties.
+      platform: The platform name (AWS, Azure, Google).
+  """
+
+  total_abstract_properties = len(abstract_properties)
+  shared_properties = len(abstract_properties.intersection(platform_properties))
+  percentage_shared = (shared_properties / total_abstract_properties) * 100
+
+  platform_specific_properties = len(platform_properties - abstract_properties)
+
+  print(f"\n{platform}:")
+  print(f"{percentage_shared:.2f}% of abstract properties are present.")
+  print(f"{platform_specific_properties} platform-specific properties found.")
+
+
+# Call the function for each platform
+print("\n")
+analyze_platform_properties(Abstract_properties, AWS_properties, "AWS")
+analyze_platform_properties(Abstract_properties, Azure_properties, "Azure")
+analyze_platform_properties(Abstract_properties, Google_properties, "Google")
