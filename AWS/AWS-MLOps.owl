@@ -205,49 +205,37 @@
 
     <!-- http://www.example.com/ontologies/aws-mlops#AWS_CodeBuild_and_AWS_Lambda -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#AWS_CodeBuild_and_AWS_Lambda">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Training/Retraining_CodePipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#AWS_CodeBuild_and_AWS_Lambda"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_and_AWS_CodeBuild -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_and_AWS_CodeBuild">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Deployment_CodePipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_and_AWS_CodeBuild"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_for_EDA -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_for_EDA">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Training/Retraining_CodePipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#AWS_CodeCommit_for_EDA"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#Amazon_EventBridge -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Amazon_EventBridge">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Trigger/Scheduler_AWS"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Amazon_EventBridge"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#Artifact_Registry -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Artifact_Registry">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#CI/CD_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Artifact_Registry"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#CloudWatch_Metrics_and_Alarm -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#CloudWatch_Metrics_and_Alarm">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Trigger/Scheduler_AWS"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#CloudWatch_Metrics_and_Alarm"/>
     
 
 
@@ -259,9 +247,7 @@
 
     <!-- http://www.example.com/ontologies/aws-mlops#Custom_VPC -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Custom_VPC">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Custom_VPC"/>
     
 
 
@@ -273,57 +259,43 @@
 
     <!-- http://www.example.com/ontologies/aws-mlops#Feature_Engineering_and_Data_Labeling -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Feature_Engineering_and_Data_Labeling">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Feature_Engineering_and_Data_Labeling"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#Model_Deployment -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Deployment">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Release/Deployment"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Deployment"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#Model_Deployment_CodePipeline -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Deployment_CodePipeline">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Deployment_CodePipeline"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#Model_Registry -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Registry">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Training/Retraining_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Registry"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#Model_Serving -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Serving">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Release/Deployment"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Serving"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#Source_Code_Repo -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Source_Code_Repo">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#CI/CD_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Source_Code_Repo"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#Train_and_Evaluate -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Train_and_Evaluate">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Training/Retraining_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Train_and_Evaluate"/>
     
 
 
@@ -347,17 +319,13 @@
 
     <!-- http://www.example.com/ontologies/aws-mlops#CI/CD_steps -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#CI/CD_steps">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#CI/CD_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#CI/CD_steps"/>
     
 
 
     <!-- http://www.example.com/ontologies/aws-mlops#Managing/Monitoring_Model -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Managing/Monitoring_Model">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#Model_Release/Deployment"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Managing/Monitoring_Model"/>
     
 
 
@@ -369,9 +337,7 @@
 
     <!-- http://www.example.com/ontologies/aws-mlops#Model_Training/Retraining_CodePipeline -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Training/Retraining_CodePipeline">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Model_Training/Retraining_CodePipeline"/>
     
 
 
@@ -383,9 +349,7 @@
 
     <!-- http://www.example.com/ontologies/aws-mlops#Trigger/Scheduler_AWS -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Trigger/Scheduler_AWS">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/aws-mlops#AWS"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/aws-mlops#Trigger/Scheduler_AWS"/>
     
 
 

@@ -157,9 +157,7 @@
 
     <!-- http://www.example.com/ontologies/abstract-mlops#Artifact_Registry -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Artifact_Registry">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Artifact_Registry"/>
     
 
 
@@ -177,41 +175,31 @@
 
     <!-- http://www.example.com/ontologies/abstract-mlops#Model_Deployment -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Deployment">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Deployment"/>
     
 
 
     <!-- http://www.example.com/ontologies/abstract-mlops#Model_Registry -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Registry">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Registry"/>
     
 
 
     <!-- http://www.example.com/ontologies/abstract-mlops#Model_Serving -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Serving">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Model_Serving"/>
     
 
 
     <!-- http://www.example.com/ontologies/abstract-mlops#Source_Code_Repo -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Source_Code_Repo">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Source_Code_Repo"/>
     
 
 
     <!-- http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Training/Retraining_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Train_and_Evaluate"/>
     
 
 
@@ -235,17 +223,13 @@
 
     <!-- http://www.example.com/ontologies/abstract-mlops#CI/CD_steps -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#CI/CD_steps">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#CI/CD_Pipeline"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#CI/CD_steps"/>
     
 
 
     <!-- http://www.example.com/ontologies/abstract-mlops#Managing/Monitoring_Model -->
 
-    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Managing/Monitoring_Model">
-        <rdfs:subClassOf rdf:resource="http://www.example.com/ontologies/abstract-mlops#Model_Release/Deployment"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.example.com/ontologies/abstract-mlops#Managing/Monitoring_Model"/>
     
 
 
