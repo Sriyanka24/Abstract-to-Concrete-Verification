@@ -161,17 +161,25 @@ print("\n")
 get_unmapped_platform_nodes('Google/Google-MLOps.owl', "Google")
 
 
-# Merging platform-specific DataFrames
 def merge_dataframes():
   dfs = []
   for platform in ['AWS', 'Azure', 'Google']:
-    df = pd.read_csv(f"{platform}/{platform}_mappings.csv").fillna('N/A')  
+    df = pd.read_csv(f"{platform}/{platform}_mappings.csv").fillna('N/A')
     dfs.append(df)
 
-  combined_df = dfs[0].merge(dfs[1], on='Abstract Node', how='outer').fillna('N/A')  
-  combined_df = combined_df.merge(dfs[2], on='Abstract Node', how='outer').fillna('N/A')  
+  combined_df = dfs[0].merge(dfs[1], on='Abstract Node', how='outer').fillna('N/A')
+  combined_df = combined_df.merge(dfs[2], on='Abstract Node', how='outer').fillna('N/A')
 
+  # Copy combined_df and remove underscores
+  cleaned_df = combined_df.copy()
+  cleaned_df = cleaned_df.applymap(lambda x: x.replace('_', ' '))
+
+# Ensure all columns are converted to string before applying replacement
+  cleaned_df = cleaned_df.astype(str)
+
+  # Save combined_df and cleaned_df to separate CSV files
   combined_df.to_csv("Files/combined_mappings.csv", index=False)
+  cleaned_df.to_csv("Files/cleaned_mappings.csv", index=False)
 
 merge_dataframes()
 

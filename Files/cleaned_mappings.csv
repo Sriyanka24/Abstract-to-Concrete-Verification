@@ -1,0 +1,17 @@
+Abstract Node,AWS Node,Azure Node,Google Node
+Cloud Storage,S3 Bucket,Azure Blob Storage,Google Cloud Storage
+Source Code Repo,AWS CodeCommit,Azure Repos,Cloud Source Repositories
+CI/CD Pipeline,SageMaker Container Images CI/CD CodePipeline,Azure DevOps Build Pipeline,CI/CD Vertex AI Pipeline
+Train and Evaluate,SageMaker ML Pipeline,AML Compute Train and Evaluate,Vertex AI Train and Evaluate
+Model Release/Deployment,Model Deployment CodePipeline,Azure DevOps Release Pipeline,Model Deployment and Monitoring
+Model Deployment,CloudFormation,AML Model Management,Vertex AI Prediction
+Artifact Registry,ECR,Azure Container Registry,GCP Artifact Registry
+Training/Retraining Pipeline,Model Training/Retraining CodePipeline,AML Retraining Pipeline,Vertex AI Training/Retraining Pipeline
+Model Registry,SageMaker Model Registry,AML Model Registry,Vertex AI Model Registry
+Model Serving,SageMaker Endpoint,AML Model Serving/ Scoring services,Vertex AI Prediction
+CI/CD steps,AWS CodeBuild and SageMaker Docker Image,Continuous Integration,Cloud Build
+Managing/Monitoring Model,Model Monitoring Job,Application Insights,Vertex AI Model Monitor
+Data Processing,Feature Engineering and Data Labeling,Data Prep and Validation,Dataflow
+User,AWS User,Azure User,GCP User
+Triggers/Scheduler,Triggers/Scheduler AWS,N/A,Triggers/Scheduler Google
+Workspace,SageMaker Notebook,AML Workspace,Vertex AI Workbench
